@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  cassandra:
+    image: cassandra:4.0
+    ports:
+      - '7000:7000'
+      - '9042:9042'
+    volumes:
+      - ~/cassandra_data:/var/lib/cassandra
+    environment:
+      - CASSANDRA_CLUSTER_NAME=citizix
